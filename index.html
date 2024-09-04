@@ -699,6 +699,43 @@
             font-size: 16px;
         }
     }
+
+      table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+
+  @media screen and (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+
+    th {
+      display: none;
+    }
+
+    td {
+      position: relative;
+      padding-left: 50%;
+      text-align: right;
+    }
+
+    td:before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      padding-left: 10px;
+      white-space: nowrap;
+      font-weight: bold;
+    }
+  }
 </style>
 
 </head>
@@ -1066,45 +1103,45 @@ Beyond these core features, Fast Pay Casino also offers a VIP program that deliv
 
 <p>Additionally, we offer an exclusive VIP program, available by invitation only, where players enjoy five unique levels of special treatment. As a VIP member, you’ll gain access to personalized services, exclusive bonuses, and invitations to high-stakes tournaments, ensuring a premium experience that’s second to none.</p>
 
-<table style="width:100%; border-collapse: collapse; text-align: left; margin-top: 20px;">
+<table>
   <thead>
     <tr>
-      <th style="border: 1px solid #ddd; padding: 10px;">Payment Method</th>
-      <th style="border: 1px solid #ddd; padding: 10px;">Deposit Minimum</th>
-      <th style="border: 1px solid #ddd; padding: 10px;">Withdrawal Minimum</th>
-      <th style="border: 1px solid #ddd; padding: 10px;">Withdrawal Processing Time</th>
+      <th>Payment Method</th>
+      <th>Deposit Minimum</th>
+      <th>Withdrawal Minimum</th>
+      <th>Withdrawal Processing Time</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="border: 1px solid #ddd; padding: 10px;">Visa/Mastercard</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">€10</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">€20</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">1-3 Business Days</td>
+      <td data-label="Payment Method">Visa/Mastercard</td>
+      <td data-label="Deposit Minimum">€10</td>
+      <td data-label="Withdrawal Minimum">€20</td>
+      <td data-label="Withdrawal Processing Time">1-3 Business Days</td>
     </tr>
     <tr>
-      <td style="border: 1px solid #ddd; padding: 10px;">Bitcoin Wallet</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">€10</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">€20</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">Up to 24 Hours</td>
+      <td data-label="Payment Method">Bitcoin Wallet</td>
+      <td data-label="Deposit Minimum">€10</td>
+      <td data-label="Withdrawal Minimum">€20</td>
+      <td data-label="Withdrawal Processing Time">Up to 24 Hours</td>
     </tr>
     <tr>
-      <td style="border: 1px solid #ddd; padding: 10px;">Skrill</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">€10</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">€20</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">Instant</td>
+      <td data-label="Payment Method">Skrill</td>
+      <td data-label="Deposit Minimum">€10</td>
+      <td data-label="Withdrawal Minimum">€20</td>
+      <td data-label="Withdrawal Processing Time">Instant</td>
     </tr>
     <tr>
-      <td style="border: 1px solid #ddd; padding: 10px;">Neteller</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">€10</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">€20</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">Instant</td>
+      <td data-label="Payment Method">Neteller</td>
+      <td data-label="Deposit Minimum">€10</td>
+      <td data-label="Withdrawal Minimum">€20</td>
+      <td data-label="Withdrawal Processing Time">Instant</td>
     </tr>
     <tr>
-      <td style="border: 1px solid #ddd; padding: 10px;">Bank Transfer</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">€100</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">€500</td>
-      <td style="border: 1px solid #ddd; padding: 10px;">3-5 Business Days</td>
+      <td data-label="Payment Method">Bank Transfer</td>
+      <td data-label="Deposit Minimum">€100</td>
+      <td data-label="Withdrawal Minimum">€500</td>
+      <td data-label="Withdrawal Processing Time">3-5 Business Days</td>
     </tr>
   </tbody>
 </table>
