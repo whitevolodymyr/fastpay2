@@ -710,21 +710,20 @@
     border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
-    word-wrap: break-word; /* Ensures long words break onto the next line */
   }
 
   td {
-    white-space: normal; /* Allows text to wrap within cells */
+    white-space: normal;
+    word-break: break-word;
   }
 
-  /* Responsive table for small screens */
   @media screen and (max-width: 600px) {
     table, thead, tbody, th, td, tr {
       display: block;
     }
 
     th {
-      display: none; /* Hide table headers on mobile */
+      display: none;
     }
 
     td {
@@ -736,10 +735,18 @@
     td:before {
       content: attr(data-label);
       position: absolute;
-      left: 0;
-      padding-left: 10px;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
       white-space: nowrap;
       font-weight: bold;
+    }
+
+    td {
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      word-break: break-word;
+      hyphens: auto;
     }
   }
 </style>
