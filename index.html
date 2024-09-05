@@ -700,55 +700,61 @@
         }
     }
 
- table {
+table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-  }
+}
 
-  th, td {
+th, td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
-  }
-
-  td {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
     white-space: normal;
-    word-break: break-word;
-  }
+}
 
-  @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
     table, thead, tbody, th, td, tr {
-      display: block;
+        display: block;
     }
 
     th {
-      display: none;
+        display: none;
     }
 
     td {
-      position: relative;
-      padding-left: 50%;
-      text-align: right;
+        position: relative;
+        padding-left: 50%;
+        padding: 5px; /* Reduced padding for mobile */
+        text-align: right;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+        font-size: 0.9em; /* Slightly reduced font size for mobile */
     }
 
     td:before {
-      content: attr(data-label);
-      position: absolute;
-      left: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      white-space: nowrap;
-      font-weight: bold;
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        white-space: nowrap;
+        font-weight: bold;
+        font-size: 0.85em; /* Slightly smaller font size for data-label */
+        max-width: 50%; /* Ensure label doesn't take too much space */
     }
 
     td {
-      overflow-wrap: break-word;
-      word-wrap: break-word;
-      word-break: break-word;
-      hyphens: auto;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
     }
-  }
+}
+
 </style>
 
 </head>
