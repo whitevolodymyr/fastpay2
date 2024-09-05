@@ -803,21 +803,22 @@ th, td {
     color: white;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
     text-align: center;
-    padding: 20px;
+    padding: 80px 20px 20px; /* Added top padding to move text down */
     box-sizing: border-box;
 }
 
 /* Text and button styles */
 .slider-text {
-    font-size: 2.5rem; /* Reasonable size for desktop */
-    max-width: 90%; /* Prevent text from stretching too wide */
+    font-size: 2.5rem;
+    max-width: 90%; 
     font-weight: bold;
     z-index: 101;
+    margin-top: 0; /* Ensure no extra margin at the top */
 }
 
 .slider-subtext {
-    font-size: 1.2rem; /* Smaller size to fit properly */
-    max-width: 90%; /* Keep within container */
+    font-size: 1.2rem;
+    max-width: 90%;
     margin-bottom: 10px;
     z-index: 101;
 }
@@ -859,12 +860,12 @@ th, td {
     .overlay {
         justify-content: center;
         align-items: center;
-        padding: 10px;
+        padding: 60px 10px 10px; /* Ensure enough top padding on mobile */
     }
 
     .slider-text {
-        font-size: 1.8rem; /* Smaller size for mobile */
-        max-width: 90%; /* Keep text within the container */
+        font-size: 1.8rem;
+        max-width: 90%;
     }
 
     .slider-subtext {
@@ -877,6 +878,12 @@ th, td {
         font-size: 1rem;
         padding: 8px 16px;
     }
+}
+
+/* Ensure header stays above slider */
+header {
+    position: relative;
+    z-index: 999; /* Higher z-index to ensure it stays above the slider */
 }
 
 </style>
