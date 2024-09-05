@@ -769,13 +769,13 @@ th, td {
 .slides {
     display: flex;
     transition: transform 0.6s ease-in-out;
-    width: 100%; /* Make it 100% since we're testing with one slide */
+    width: 200%; /* Adjust for two slides */
 }
 
 /* Individual slide */
 .slide {
     position: relative;
-    min-width: 100%;
+    min-width: 100%; /* Each slide takes full width */
     height: 100%;
     overflow: hidden;
 }
@@ -784,7 +784,7 @@ th, td {
     width: 100%;
     max-width: 1150px;
     max-height: 650px;
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    object-fit: cover;
 }
 
 /* Center the overlay content */
@@ -995,6 +995,7 @@ th, td {
 
 <div class="slider">
     <div class="slides">
+        <!-- Slide 1 -->
         <div class="slide">
             <img src="images/fastpay-casino-slide1.jpg" alt="Slide 1">
             <div class="overlay">
@@ -1003,9 +1004,24 @@ th, td {
                 <button class="slider-btn">Sign up</button>
             </div>
         </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+            <img src="images/fastpay-casino-slide2.png" alt="Slide 2">
+            <div class="overlay">
+                <h2 class="slider-text">WELCOME 200% BONUS</h2>
+                <p class="slider-subtext">UP TO 250 AUD WITH EXTRA SPINS</p>
+                <button class="slider-btn">Sign up</button>
+            </div>
+        </div>
+
+        <!-- Add more slides here if needed -->
     </div>
+
+    <!-- Dots for navigation -->
     <div class="dots">
         <span class="dot active" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
         <!-- Add more dots as you add more slides -->
     </div>
 </div>
