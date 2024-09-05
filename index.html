@@ -784,6 +784,8 @@ th, td {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: relative;
+    z-index: 1;
 }
 
 /* Center the overlay content */
@@ -797,6 +799,7 @@ th, td {
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     text-align: center;
+    z-index: 2; /* Ensure it appears above the image */
 }
 
 /* Highlight box for text */
@@ -807,6 +810,7 @@ th, td {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     max-width: 80%; /* Adjust to limit width */
     text-align: center;
+    z-index: 3; /* Ensure it's visible above the image */
 }
 
 /* Text and button styles */
@@ -814,12 +818,14 @@ th, td {
     font-size: 2.5rem;
     font-weight: bold;
     color: #333;
+    z-index: 4;
 }
 
 .slider-subtext {
     font-size: 1.2rem;
     margin-bottom: 10px;
     color: #555;
+    z-index: 4;
 }
 
 .slider-btn {
@@ -829,6 +835,7 @@ th, td {
     border: none;
     cursor: pointer;
     font-size: 1.1rem;
+    z-index: 4;
 }
 
 /* Dots navigation */
