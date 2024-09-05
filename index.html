@@ -755,7 +755,39 @@ th, td {
     }
 }
 
-/* Center the overlay content with a highlighted background */
+/* Slider container */
+.slider {
+    position: relative;
+    max-width: 1150px;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    height: auto;
+}
+
+/* Slides wrapper */
+.slides {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+    width: 200%; /* Adjust based on number of slides */
+}
+
+/* Individual slide */
+.slide {
+    position: relative;
+    min-width: 100%;
+    height: 100%;
+}
+
+/* Image inside slide */
+.slide img {
+    width: 100%;
+    max-width: 1150px;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Center the overlay content */
 .overlay {
     position: absolute;
     top: 0;
@@ -765,32 +797,29 @@ th, td {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    z-index: 100;
-    text-align: center;
-    padding: 20px;
 }
 
 /* Highlight box for text */
 .overlay-content {
-    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white background */
+    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent background */
     padding: 20px;
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Soft shadow for better visibility */
-    max-width: 80%; /* Limit the width of the content */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 80%; /* Limit width */
+    text-align: center;
 }
 
-/* Text and button styles inside the highlight */
+/* Text and button styles */
 .slider-text {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #333; /* Dark text color for contrast */
+    color: #333;
 }
 
 .slider-subtext {
     font-size: 1.2rem;
     margin-bottom: 10px;
-    color: #555; /* Lighter text color */
+    color: #555;
 }
 
 .slider-btn {
@@ -802,14 +831,30 @@ th, td {
     font-size: 1.1rem;
 }
 
+/* Dots navigation */
+.dots {
+    text-align: center;
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #4CAF50;
+}
+
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
-    .overlay {
-        justify-content: flex-start;
-        padding: 20px;
-        align-items: center;
-    }
-
     .overlay-content {
         padding: 15px;
         border-radius: 10px;
@@ -949,7 +994,6 @@ th, td {
 <h1>Fastpay Casino Australia</h1>
 
 <p>Fastpay Casino sets a new standard in online gaming. We offer a curated selection of top-tier games, generous bonuses, and a commitment to exceptional customer service. Our user-friendly interface ensures effortless navigation and swift access to your favorite games. Enjoy the peace of mind that comes with our secure and efficient payment processing system.</p>
-images/fastpay-casino-slide1.jpg
 
 <div class="slider">
     <div class="slides">
@@ -964,7 +1008,6 @@ images/fastpay-casino-slide1.jpg
                 </div>
             </div>
         </div>
-
         <!-- Second Slide -->
         <div class="slide">
             <img src="images/fastpay-casino-slide2.png" alt="Slide 2">
@@ -977,13 +1020,13 @@ images/fastpay-casino-slide1.jpg
             </div>
         </div>
     </div>
-
     <!-- Navigation Dots -->
     <div class="dots">
         <span class="dot active" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
     </div>
 </div>
+
 
 
 </section>
