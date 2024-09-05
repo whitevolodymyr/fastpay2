@@ -761,7 +761,7 @@ th, td {
     max-width: 100%;
     margin: auto;
     overflow: hidden;
-    height: 100vh; /* Ensures the slider takes the full height of the viewport */
+    height: auto; /* Changed to auto to fit content */
 }
 
 /* Individual slide */
@@ -769,19 +769,18 @@ th, td {
     display: flex;
     width: 500%; /* 5 slides */
     transition: 0.5s ease;
-    height: 100%; /* Match the container height */
 }
 
 .slide {
     position: relative;
     min-width: 100%;
-    height: 100%; /* Ensure the slide takes the full height */
+    box-sizing: border-box;
 }
 
 .slide img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the image covers the entire area without stretching */
+    height: auto; /* Ensures the height adjusts based on image */
+    object-fit: cover; /* Prevent stretching */
 }
 
 /* Overlay text on the images */
@@ -852,10 +851,6 @@ th, td {
     .slider-btn {
         font-size: 1rem;
         padding: 8px 16px;
-    }
-
-    .slide img {
-        object-fit: contain; /* Prevents cropping of images on small screens */
     }
 }
 
@@ -982,7 +977,7 @@ th, td {
 <div class="slider">
     <div class="slides">
         <div class="slide">
-            <img src="images/fastpay-casino-slide1.jpg" alt="Fastpay Casino Slide 1">
+            <img src="images/fastpay-casino-slide1.jpg" alt="Slide 1">
             <div class="overlay">
                 <h2 class="slider-text">WELCOME 100% BONUS</h2>
                 <p class="slider-subtext">UP TO 150 AUD WITH NO MAX PAYOUT + 100 FREE SPINS</p>
@@ -997,7 +992,7 @@ th, td {
                 <button class="slider-btn">Sign up</button>
             </div>
         </div>
-        <!-- Add 3 more slides similar to the above -->
+        <!-- Add 3 more slides -->
     </div>
     <div class="dots">
         <span class="dot" onclick="currentSlide(1)"></span>
