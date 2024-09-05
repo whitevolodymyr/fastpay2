@@ -758,29 +758,44 @@ th, td {
 /* Slider container */
 .slider {
     position: relative;
-    max-width: 100%;
+    max-width: 1150px; /* Max width for desktop */
     margin: auto;
     overflow: hidden;
-    height: auto; /* Changed to auto to fit content */
+    height: auto; /* Ensure height adjusts to content */
 }
 
 /* Individual slide */
 .slides {
     display: flex;
-    width: 500%; /* 5 slides */
-    transition: 0.5s ease;
+    transition: transform 0.6s ease-in-out; /* Smooth transition for slide flipping */
 }
 
 .slide {
     position: relative;
     min-width: 100%;
-    box-sizing: border-box;
+    height: auto;
 }
 
 .slide img {
     width: 100%;
-    height: auto; /* Ensures the height adjusts based on image */
-    object-fit: cover; /* Prevent stretching */
+    max-width: 1150px; /* Maximum width for desktop */
+    max-height: 650px;  /* Maximum height for desktop */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    margin: 0 auto;
+}
+
+/* Mobile image sizing */
+@media screen and (max-width: 768px) {
+    .slider {
+        max-width: 420px; /* Max width for mobile */
+        height: auto;     /* Let height adjust to content */
+    }
+
+    .slide img {
+        max-width: 420px; /* Max width for mobile */
+        max-height: 460px; /* Max height for mobile */
+        object-fit: contain; /* Prevent cropping on smaller screens */
+    }
 }
 
 /* Overlay text on the images */
