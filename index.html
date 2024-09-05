@@ -755,137 +755,6 @@ th, td {
     }
 }
 
-/* Slider container */
-.slider {
-    position: relative;
-    max-width: 1150px;
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
-    height: 650px; /* Set for desktop */
-}
-
-/* Slides wrapper */
-.slides {
-    display: flex;
-    transition: transform 0.6s ease-in-out;
-    width: 100%;
-}
-
-/* Individual slide */
-.slide {
-    position: relative;
-    min-width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.slide img {
-    width: 100%;
-    max-width: 1150px;
-    max-height: 650px;
-    object-fit: cover;
-    position: relative;
-}
-
-/* Center the overlay content */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    z-index: 100;
-    color: white;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-    text-align: center;
-    padding: 80px 20px 20px; /* Added top padding to move text down */
-    box-sizing: border-box;
-}
-
-/* Text and button styles */
-.slider-text {
-    font-size: 2.5rem;
-    max-width: 90%; 
-    font-weight: bold;
-    z-index: 101;
-    margin-top: 0; /* Ensure no extra margin at the top */
-}
-
-.slider-subtext {
-    font-size: 1.2rem;
-    max-width: 90%;
-    margin-bottom: 10px;
-    z-index: 101;
-}
-
-.slider-btn {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 1.1rem;
-    z-index: 101;
-}
-
-/* Dots navigation */
-.dots {
-    text-align: center;
-    position: absolute;
-    bottom: 15px;
-    width: 100%;
-}
-
-.dot {
-    height: 15px;
-    width: 15px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.dot.active {
-    background-color: #4CAF50;
-}
-
-/* Mobile responsiveness */
-@media screen and (max-width: 768px) {
-    .overlay {
-        justify-content: center;
-        align-items: center;
-        padding: 60px 10px 10px; /* Ensure enough top padding on mobile */
-    }
-
-    .slider-text {
-        font-size: 1.8rem;
-        max-width: 90%;
-    }
-
-    .slider-subtext {
-        font-size: 1rem;
-        margin-bottom: 10px;
-        max-width: 90%;
-    }
-
-    .slider-btn {
-        font-size: 1rem;
-        padding: 8px 16px;
-    }
-}
-
-/* Ensure header stays above slider */
-header {
-    position: relative;
-    z-index: 999; /* Higher z-index to ensure it stays above the slider */
-}
-
 </style>
 </head>
 
@@ -997,22 +866,17 @@ header {
     <div class="container">
         <div class="content-inner">
             <section>
-<section>
-    <div class="slider">
-    <div class="slides">
-        <div class="slide">
-            <img src="images/fastpay-casino-slide3.png" alt="Slide 3">
-            <div class="overlay">
-                <h2 class="slider-text">100% WELCOME BONUS</h2>
-                <p class="slider-subtext">100 FREE SPINS + UP TO 150 AUD BONUS - No PAYOUT LIMITS!</p>
-                <button class="slider-btn">Sign Up</button>
-            </div>
-        </div>
-    </div>
-    <div class="dots">
-        <span class="dot active" onclick="currentSlide(1)"></span>
-    </div>
-</div>
+    <div class="content-image">
+                    <picture>
+                        <source srcset="images/bannerr1.webp 1600w, images/bannerr1-1440.webp 1440w, images/bannerr1-768.webp 768w">
+                        <source srcset="images/bannerr1.jpg">
+                        <img src="images/bannerr1.jpg" alt="Fastpay Casino" width="1135" height="350">
+                    </picture>
+                    <div class="overlay">
+                        <p>Begin your <span>Fastpay Casino</span> experience with a <span>100% match bonus</span> up to <span>€100</span> and <span>100 Free Spins</span>.</p>
+                        <button aria-label="SIGN UP" class="pic button button-primary button-content">SIGN UP!</button>
+                    </div>
+                </div>
     
     <h2>Our Top Games</h2>
                 <ul class="games-list">
