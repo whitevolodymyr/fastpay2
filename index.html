@@ -755,6 +755,11 @@ th, td {
     }
 }
 
+.responsive-image {
+    max-width: 100%;   /* Ensure the image never exceeds the container width */
+    height: auto;      /* Maintain aspect ratio */
+}
+
 </style>
 </head>
 
@@ -1128,9 +1133,7 @@ th, td {
 <h2>Fastpay Casino Payment Options</h2>
 
 <picture>
-    <!-- Single image optimized for different screen densities -->
-    <source srcset="images/fastpay-casino-payments.png 1x, images/fastpay-casino-payments@2x.png 2x" media="(max-width: 768px)" width="768" height="250">
-    <img src="images/fastpay-casino-payments.png" alt="Payment Options" loading="lazy" width="1135" height="350">
+    <img src="images/fastpay-casino-payments.png" alt="Payment Options" loading="lazy" class="responsive-image">
 </picture>
 
 <picture>
