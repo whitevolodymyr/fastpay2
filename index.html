@@ -769,7 +769,7 @@ th, td {
 .slides {
     display: flex;
     transition: transform 0.6s ease-in-out;
-    width: 500%; /* 5 slides */
+    width: 500%; /* Adjust width for the number of slides */
 }
 
 /* Individual slide */
@@ -780,22 +780,22 @@ th, td {
 
 .slide img {
     width: 100%;
-    max-width: 1150px; /* Max size for desktop */
-    max-height: 650px;  /* Max height for desktop */
-    object-fit: cover;  /* Maintain aspect ratio and cover the container */
+    max-width: 1150px;
+    max-height: 650px;
+    object-fit: cover; /* Maintain aspect ratio */
 }
 
 /* Mobile image sizing */
 @media screen and (max-width: 768px) {
     .slider {
-        max-width: 420px; /* Max width for mobile */
-        height: auto;     /* Let height adjust to content */
+        max-width: 420px;
+        height: auto;
     }
 
     .slide img {
-        max-width: 420px; /* Max width for mobile */
-        max-height: 460px; /* Max height for mobile */
-        object-fit: contain; /* Prevent cropping on smaller screens */
+        max-width: 420px;
+        max-height: 460px;
+        object-fit: contain;
     }
 }
 
@@ -810,9 +810,11 @@ th, td {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: white;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-    text-align: center; /* Center the text */
+    z-index: 10; /* Ensure overlay is above the image */
+    color: white; /* Set text color to contrast with background */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Add shadow for better readability */
+    text-align: center; /* Center text */
+    background-color: rgba(0, 0, 0, 0.4); /* Optional: Semi-transparent background */
 }
 
 /* Text and button styles */
@@ -833,6 +835,7 @@ th, td {
     border: none;
     cursor: pointer;
     font-size: 1.1rem;
+    z-index: 10;
 }
 
 /* Dots navigation */
@@ -860,23 +863,24 @@ th, td {
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
     .overlay {
-        justify-content: flex-start; /* Start at the top */
-        padding: 20px; /* Add padding around the text */
+        justify-content: flex-start;
+        padding: 20px;
         align-items: center;
+        background-color: rgba(0, 0, 0, 0.5); /* Background for readability */
     }
 
     .slider-text {
-        font-size: 1.2rem; /* Smaller font size for mobile */
+        font-size: 1.2rem;
     }
 
     .slider-subtext {
-        font-size: 0.9rem; /* Smaller font size for mobile */
+        font-size: 0.9rem;
         margin-bottom: 10px;
     }
 
     .slider-btn {
-        font-size: 0.9rem; /* Smaller button size for mobile */
-        padding: 8px 16px; /* Adjust padding for mobile */
+        font-size: 0.9rem;
+        padding: 8px 16px;
     }
 }
 </style>
