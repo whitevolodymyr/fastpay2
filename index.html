@@ -762,14 +762,14 @@ th, td {
     width: 100%;
     margin: auto;
     overflow: hidden;
-    height: auto;
+    height: 650px; /* Set fixed height for desktop */
 }
 
 /* Slides wrapper */
 .slides {
     display: flex;
     transition: transform 0.6s ease-in-out;
-    width: 200%; /* Adjust for two slides */
+    width: 200%; /* Adjust to fit multiple slides, increase based on the number of slides */
 }
 
 /* Individual slide */
@@ -778,13 +778,16 @@ th, td {
     min-width: 100%; /* Each slide takes full width */
     height: 100%;
     overflow: hidden;
+    display: flex; /* Flex to allow centering content */
+    justify-content: center;
+    align-items: center;
 }
 
 .slide img {
     width: 100%;
     max-width: 1150px;
     max-height: 650px;
-    object-fit: cover;
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
 }
 
 /* Center the overlay content */
@@ -852,27 +855,22 @@ th, td {
 
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
-    .overlay {
-        justify-content: flex-start;
-        padding: 20px;
-        align-items: center;
+    .slider {
+        height: 460px;
     }
 
     .slider-text {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .slider-subtext {
-        font-size: 0.9rem;
-        margin-bottom: 10px;
+        font-size: 1rem;
     }
 
     .slider-btn {
         font-size: 0.9rem;
-        padding: 8px 16px;
     }
 }
-
 </style>
 
 </head>
