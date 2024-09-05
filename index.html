@@ -762,7 +762,7 @@ th, td {
     width: 100%;
     margin: auto;
     overflow: hidden;
-    height: 650px; /* Set fixed height for desktop */
+    height: 650px; /* Fixed height for desktop */
 }
 
 /* Slides wrapper */
@@ -777,17 +777,16 @@ th, td {
     position: relative;
     min-width: 100%; /* Each slide takes full width */
     height: 100%;
-    overflow: hidden;
     display: flex; /* Flex to allow centering content */
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .slide img {
     width: 100%;
-    max-width: 1150px;
-    max-height: 650px;
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the slide without distortion */
 }
 
 /* Center the overlay content */
@@ -857,6 +856,11 @@ th, td {
 @media screen and (max-width: 768px) {
     .slider {
         height: 460px;
+    }
+
+    .slide img {
+        height: auto;
+        object-fit: cover;
     }
 
     .slider-text {
