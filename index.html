@@ -769,7 +769,7 @@ th, td {
 .slides {
     display: flex;
     transition: transform 0.6s ease-in-out;
-    width: 100%; /* Make it 100% since we're testing with one slide */
+    width: 100%;
 }
 
 /* Individual slide */
@@ -784,8 +784,8 @@ th, td {
     width: 100%;
     max-width: 1150px;
     max-height: 650px;
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
-    position: relative; /* Ensure image stays within boundaries */
+    object-fit: cover;
+    position: relative;
 }
 
 /* Center the overlay content */
@@ -804,18 +804,20 @@ th, td {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
     text-align: center;
     padding: 20px;
-    box-sizing: border-box; /* Ensure padding doesn't break layout */
+    box-sizing: border-box;
 }
 
 /* Text and button styles */
 .slider-text {
-    font-size: 5vw; /* Adjust based on the viewport width */
+    font-size: 2.5rem; /* Reasonable size for desktop */
+    max-width: 90%; /* Prevent text from stretching too wide */
     font-weight: bold;
     z-index: 101;
 }
 
 .slider-subtext {
-    font-size: 2.5vw; /* Use viewport width for responsive scaling */
+    font-size: 1.2rem; /* Smaller size to fit properly */
+    max-width: 90%; /* Keep within container */
     margin-bottom: 10px;
     z-index: 101;
 }
@@ -826,7 +828,7 @@ th, td {
     color: white;
     border: none;
     cursor: pointer;
-    font-size: 2vw; /* Viewport responsive font */
+    font-size: 1.1rem;
     z-index: 101;
 }
 
@@ -855,22 +857,24 @@ th, td {
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
     .overlay {
-        justify-content: center; /* Center content even on mobile */
+        justify-content: center;
         align-items: center;
         padding: 10px;
     }
 
     .slider-text {
-        font-size: 4vw; /* Viewport-based font scaling */
+        font-size: 1.8rem; /* Smaller size for mobile */
+        max-width: 90%; /* Keep text within the container */
     }
 
     .slider-subtext {
-        font-size: 3vw; /* Adjust for smaller screens */
+        font-size: 1rem;
         margin-bottom: 10px;
+        max-width: 90%;
     }
 
     .slider-btn {
-        font-size: 3vw; /* Viewport-based button size */
+        font-size: 1rem;
         padding: 8px 16px;
     }
 }
